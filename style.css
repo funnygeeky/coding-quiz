@@ -1,0 +1,6 @@
+style.css
+.boxcolor {
+    display:flexbox;
+    padding: 1px;
+    background-color: blue;
+}
