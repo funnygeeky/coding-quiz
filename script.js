@@ -25,24 +25,27 @@ function changeColor1()
 //         box2.style.backgroundColor = "blue";
 //     }
 // });
-var timerEl = document.getElementById ('countdown');
-var timer = document.getElementById('timer');
+//var timerEl = document.getElementById ('countdown');
+// Attach an event listener to the 'start quiz' button element
+
+// Call the timer to countdown when the start quiz button is clicked
+var startQuizEl = document.querySelector("button");
+console.log (startQuizEl);
+startQuizEl.addEventListener("click", countdown ());
+
 
 //Timer that counts down from 75
 function countdown () {
+    var timerEl = document.getElementById('timer');
     var timeLeft = 2;
     //Use the 'setInterval()' method to call a function to be executed every 1000 milliseconds
     var timeInterval = setInterval (function (){
         //As long as the 'timeLeft' is great than 1
         if (timeLeft > 1) {
             //Set the 'textcontent of 'timerEL to show the remaining seconds
-            timerEl.textContent = timeLeft + ' seconds remaining';
+            timerEl.textContent = 'Timer:  '+ timeLeft;
             //Decrement timeLeft' by 1
-            timeLeft--;
-        } else if (timeLeft === 1) {
-            //When 'timeLeft is equal to 1, rename to 'second' instead of 'seconds'
-            timerEl.textContent = timeLeft + ' second remaining';
-            timeLeft--;
+            timeLeft-= 1;
         }else if (timeLeft === 0) {
             //Use 'clearInterval()'to stop the timer
             clearInterval(timeInterval)
@@ -50,7 +53,6 @@ function countdown () {
             timerEl.textContent = '';}
         },1000);
 }
-
-// Attach an event listener to the 'start quiz' button element
-var startQuizEl = document.querySelector("button");
-startQuizEl.addEventListener("click", countdown ());
+//Call the timer to countdown when the start quiz button is clicked
+// var startQuizEl = document.querySelector("button");
+// startQuizEl.addEventListener("click", countdown ());
