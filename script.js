@@ -42,13 +42,15 @@ function countdown () {
         } else if (timeLeft === 1) {
             //When 'timeLeft is equal to 1, rename to 'second' instead of 'seconds'
             timerEl.textContent = timeLeft + ' second remaining';
-        }else {
-            //Once 'timeLeft gets to 0, set 'timerEl' to an empty string
-            timerEl.textContent = '';
+            timeLeft--;
+        }else if (timeLeft === 0) {
             //Use 'clearInterval()'to stop the timer
-            clearInterval(timeInterval);
-        }
-    },1000);
+            clearInterval(timeInterval)
+            //Once 'timeLeft gets to 0, set 'timerEl' to an empty string
+            timerEl.textContent = '';}
+        },1000);
 }
-countdown();
-console.log ("countdown");
+
+// Attach an event listener to the 'start quiz' button element
+var startQuizEl = document.querySelector("button");
+startQuizEl.addEventListener("click", countdown ());
