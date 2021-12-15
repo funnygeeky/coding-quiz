@@ -13,6 +13,12 @@
     background-color:blue;
     color: white;
 }
+#timer{
+        position:absolute;
+        top:0;
+        right:0;
+        font-size: 20px;
+    }
 
 
 /* .boxcolor { 
