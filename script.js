@@ -1,18 +1,6 @@
 //variables for timer and start quiz button
 var timerEl = document.getElementById('timer');
 var startQuizEl = document.querySelector(".btn");
-//
-//array to hold questions and answers text
-var questions = [
-    {
-        question: "What does API stand for?"
-        answers: [
-            {text: "Associated Programs International", correct: false },
-            {text: "Application Program Interval", correct: false },
-            // {text: "Application Programming Interface"}, correct: true},
-            {text: "Apple - Pi Integration", correct: false}
-        ]
-    }
 
 
 
@@ -20,7 +8,7 @@ var questions = [
 function countdown () {
     console.log("countdown function being called")
     
-    var timeLeft = 30;
+    var timeLeft = 75;
     //Use the 'setInterval()' method to call a function to be executed every 1000 milliseconds
     var timeInterval = setInterval (function (){
         console.log(timeLeft);
