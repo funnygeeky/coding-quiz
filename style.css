@@ -16,13 +16,13 @@
 #timer{
         position:absolute;
         top:0;
-        right:0;
+        right: 10px;;
         font-size: 15px;
     }
 #highscores {
     position: fixed;
     top:0;
-    left:0;
+    left: 10px;;
 }
 
 
