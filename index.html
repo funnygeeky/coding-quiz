@@ -8,10 +8,12 @@
     <title>Coding Quiz Challenge</title>
 </head>
 <body>
+    <!-- Created a body div with class center to align content -->
     <div class="center">
         <h1>Coding Quiz Challenge</h1>
 
-        <p>Try to answer the following code-related questions within the time limit</br>
+        <p> Welcome to the Coding Quiz Challenge!</br>
+            Try to answer the following code-related questions within the time limit</br>
             Keep in mind that incorrect answers will paenalize your score/time<br/>
             by ten seconds!
         </p>
@@ -19,21 +21,46 @@
             <button class="btn">
                 Start Quiz
             </button>
+            <!-- The timer starts when the button is clicked -->
             <div id="timer"></div>
         </div>
+        <!-- Countdown starts at 75 seconds -->
         <div id="countdown"></div>
-         
-        
-</div>
+
+    </div>
 <!-- Display High Scores link in upper left corner -->
 <div id="highscores">
   <a href="./high_scores.html">High Scores</a>  
 </div>
-<!-- Question boxes for question 1 -->
-    <!-- <div class="boxcolor" id="box1"></div>
-    <div class="boxcolor" id="box2"></div>
-    <div class="boxcolor" id="box3"></div>
-    <div class="boxcolor" id="box4"></div>-->
+
+<!--Created div for the question  -->
+<div id="question">What is the answer to this question</div>
+    <!-- div for the choice -->
+    <div class="choice-containter">
+    <p class="choice-prefix">A</p>
+    <!-- Add data attribute to know which Choice is chosen -->
+    <p class="choice-text" data-number="1">Choice</p>
+    </div>
+    <!-- div for the 2nd choice -->
+    <div class="choice-containter">
+        <p class="choice-prefix">B</p>
+        <!-- Add data attribute to know which Choice is chosen -->
+        <p class="choice-text" data-number="2">Choice</p>
+        </div>
+        <!-- div for the 3rd choice -->
+    <div class="choice-containter">
+        <p class="choice-prefix">C</p>
+        <!-- Add data attribute to know which Choice is chosen -->
+        <p class="choice-text" data-number="3">Choice</p>
+        </div>
+        <!-- div for the 4th choice -->
+    <div class="choice-containter">
+        <p class="choice-prefix">D</p>
+        <!-- Add data attribute to know which Choice is chosen -->
+        <p class="choice-text" data-number="4">Choice</p>
+        </div>
+    </body>
+       
     <script src="./script.js"></script> 
 </body>
 </html>
