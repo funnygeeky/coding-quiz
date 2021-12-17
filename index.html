@@ -18,7 +18,7 @@
             by ten seconds!
         </p>
         <div>
-            <button class="btn">
+            <button class="btn" id="hide">
                 Start Quiz
             </button>
             <!-- The timer starts when the button is clicked -->
@@ -34,7 +34,8 @@
 </div>
 
 <!--Created div for the question  -->
-<h1 id="question">What is the answer to this question</h1>
+<div id="show">
+    <h1 id="question">What is the answer to this question</h1>
     <!-- div for the choice -->
     <div class="choice-container">
     <p class="choice-prefix">A </p>
@@ -59,6 +60,7 @@
         <!-- Add data attribute to know which Choice is chosen -->
         <p class="choice-text" data-number="4"> Choice 4</p>
         </div>
+</div>
     </body>
        
     <script src="./script.js"></script> 

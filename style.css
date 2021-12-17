@@ -70,6 +70,7 @@ box-shadow:lightblue;
     font-size:medium
 }
 
+
 @media screen and (max-width: 768px) {
     .choice-container {
         min-width: auto;

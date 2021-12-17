@@ -2,6 +2,9 @@
 var timerEl = document.getElementById('timer');
 var startQuizEl = document.querySelector(".btn");
 
+var showQuestion = document.querySelector("#show");
+
+
 //variables for question and choices array
 var question = document.querySelector('#question');
 var choices = Array.from(document.querySelectorAll('.choice-text'));
@@ -55,16 +58,14 @@ var questions = [
         answer:1,
     }
     ]
-
-
-
-
-
+    var questionCounter = 0;
+    var maxQuestions = 5;
+    var timeLeft = 75;
 //Timer that counts down from 75
 function countdown () {
     console.log("countdown function being called")
     
-    var timeLeft = 75;
+    
     //Use the 'setInterval()' method to call a function to be executed every 1000 milliseconds
     var timeInterval = setInterval (function (){
         console.log(timeLeft);
@@ -85,3 +86,36 @@ function countdown () {
 // Call the timer to countdown when the start quiz button is clicked
 
 startQuizEl.addEventListener("click", countdown);
+    //Function to present a question from the array
+    function startQuiz() {
+        questionCounter = 0;
+        availableQuestions = [...questions]
+        getNewQuestion()
+    }
+getNewQuestion = () => {
+    if(availableQuestions.length === 0 || questionCounter > maxQuestions) {
+        localStorage.setItem('mostRecentScore', score)
+        
+    }
+    questionCounter++
+}
+choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+        if(acceptingAnswers) return
+
+        acceptingAnswers = false
+        var selectedChoice = e.target
+        var selectedAnswer = selectedChoice.dataset['number']
+
+        var classToApply = selectedAnswer == currentQuestion.answer ? 'correct':
+        'incorrect';
+
+        selectedChoice.parentElement.classList.add(classToApply)
+
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply)
+            getNewQuestion();
+        }, 1000)
+    })
+
+})
