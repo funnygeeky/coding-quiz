@@ -1,3 +1,5 @@
+
+
 //variables for timer and start quiz button
 var timerEl = document.getElementById('timer');
 var startQuizEl = document.querySelector(".btn");
@@ -5,14 +7,11 @@ var startQuizEl = document.querySelector(".btn");
 var showQuestion = document.querySelector("#show");
 
 
+
 //variables for question and choices array
 var question = document.querySelector('#question');
 var choices = Array.from(document.querySelectorAll('.choice-text'));
 
-var currentQuestion = {};
-var acceptingAnswers = true;
-var questionCounter = 0;
-var availableQuestions = [];
 
 //Array of each question with choices indicating the answer
 
@@ -58,8 +57,7 @@ var questions = [
         answer:1,
     }
     ]
-    var questionCounter = 0;
-    var maxQuestions = 5;
+    
     var timeLeft = 75;
 //Timer that counts down from 75
 function countdown () {
@@ -84,38 +82,23 @@ function countdown () {
         },1000);
 }
 // Call the timer to countdown when the start quiz button is clicked
+//Function to present a question from the array
+// function displayQuestion ()
+// for (let i = 0; i < questions.length; i++){
+//     console.log(i);
+  
 
-startQuizEl.addEventListener("click", countdown);
-    //Function to present a question from the array
-    function startQuiz() {
-        questionCounter = 0;
-        availableQuestions = [...questions]
-        getNewQuestion()
+// startQuizEl.addEventListener("click", countdown);
+startQuizEl.addEventListener("click",() => {
+    countdown();
+    forEach (function(){
+
+
     }
-getNewQuestion = () => {
-    if(availableQuestions.length === 0 || questionCounter > maxQuestions) {
-        localStorage.setItem('mostRecentScore', score)
-        
-    }
-    questionCounter++
-}
-choices.forEach(choice => {
-    choice.addEventListener('click', e => {
-        if(acceptingAnswers) return
-
-        acceptingAnswers = false
-        var selectedChoice = e.target
-        var selectedAnswer = selectedChoice.dataset['number']
-
-        var classToApply = selectedAnswer == currentQuestion.answer ? 'correct':
-        'incorrect';
-
-        selectedChoice.parentElement.classList.add(classToApply)
-
-        setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply)
-            getNewQuestion();
-        }, 1000)
-    })
-
+    )
 })
+
+
+    
+    
+

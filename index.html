@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,23 @@
     <link rel="stylesheet" href="./style.css">
     <title>Coding Quiz Challenge</title>
 </head>
+
 <body>
+
+    <header>
+        <!-- Enter high score link and timer here -->
+    </header>
     <!-- Created a body div with class center to align content -->
-    <div class="center">
+    <div class="center" id="start-screen">
         <h1>Coding Quiz Challenge</h1>
 
         <p> Welcome to the Coding Quiz Challenge!</br>
             Try to answer the following code-related questions within the time limit</br>
-            Keep in mind that incorrect answers will paenalize your score/time<br/>
+            Keep in mind that incorrect answers will paenalize your score/time<br />
             by ten seconds!
         </p>
         <div>
-            <button class="btn" id="hide">
+            <button class="btn">
                 Start Quiz
             </button>
             <!-- The timer starts when the button is clicked -->
@@ -28,41 +34,16 @@
         <div id="countdown"></div>
 
     </div>
-<!-- Display High Scores link in upper left corner -->
-<div id="highscores">
-  <a href="./high_scores.html">High Scores</a>  
-</div>
-
-<!--Created div for the question  -->
-<div id="show">
-    <h1 id="question">What is the answer to this question</h1>
-    <!-- div for the choice -->
-    <div class="choice-container">
-    <p class="choice-prefix">A </p>
-    <!-- Add data attribute to know which Choice is chosen -->
-    <p class="choice-text" data-number="1"> Choice 1</p>
+    <!-- Display High Scores link in upper left corner -->
+    <div id="highscores">
+        <a href="./high_scores.html">High Scores</a>
     </div>
-    <!-- div for the 2nd choice -->
-    <div class="choice-container">
-        <p class="choice-prefix">B </p>
-        <!-- Add data attribute to know which Choice is chosen -->
-        <p class="choice-text" data-number="2"> Choice 2</p>
-        </div>
-        <!-- div for the 3rd choice -->
-    <div class="choice-container">
-        <p class="choice-prefix">C </p>
-        <!-- Add data attribute to know which Choice is chosen -->
-        <p class="choice-text" data-number="3"> Choice 3</p>
-        </div>
-        <!-- div for the 4th choice -->
-    <div class="choice-container">
-        <p class="choice-prefix">D </p>
-        <!-- Add data attribute to know which Choice is chosen -->
-        <p class="choice-text" data-number="4"> Choice 4</p>
-        </div>
-</div>
-    </body>
-       
-    <script src="./script.js"></script> 
+
+    <!--Created div for the current question  -->
+    <div id="show"> </div>
 </body>
+
+<script src="./script.js"></script>
+</body>
+
 </html>

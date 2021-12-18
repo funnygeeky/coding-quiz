@@ -26,30 +26,8 @@
     left: 10px;;
 }
 
-.choice-container {
-    display:flex;
-    margin-bottom: 5px;
-    width: 100%;
-    border-radius: 4px;
-    background: blue;
-    font-size:medium;
-    min-width: 50%;
-    color:white
-}
-
-.choice-container:hover{
-cursor:pointer;
-box-shadow:lightblue;
-}
-
-.choice-prefix{
-    padding: 2px 2.5px;
-    color: white;
-}
-
-.choice-text {
-    padding: 2px;
-    width: 100%
+#show{
+    display:flex
 }
 
 .correct {
@@ -77,3 +55,6 @@ box-shadow:lightblue;
     }
 }
 
+#hide {
+    display: none;
+}
