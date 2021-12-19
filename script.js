@@ -59,8 +59,12 @@ var questions = [
         answer:1,
     }
     ]
+    var choiceBtn = document.createElement("button");
     
+
     var timeLeft = 75;
+
+    
 //Timer that counts down from 75
 function countdown () {
     console.log("countdown function being called")
@@ -102,8 +106,14 @@ startQuizEl.addEventListener("click",() => {
 //function to print choices to the main screen after showing the question
 
 function printAnswers () {
-    for (let i = 0; i < questions.choices.length; i++){
-        console.log(questions.choices[i])
+    for (let i = 0; i < questions[0].choices.length; i++){
+        console.log(questions[0].choices[i]) &&
+        choiceBtn.textContent &&
+        choiceBtn.setAttribute(".choice-button")
+        choiceBtn.setAttribute("")
+        
+        
+      
     }
 }
 printAnswers()
