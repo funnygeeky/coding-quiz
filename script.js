@@ -12,48 +12,50 @@ var showQuestion = document.querySelector("#show");
 var question = document.querySelector('#question');
 var choices = Array.from(document.querySelectorAll('.choice-text'));
 
+//Declare main screen variable
+var startScreen = document.getElementById("start-screen")
 
 //Array of each question with choices indicating the answer
 
 var questions = [
     {
         question: 'Browsers consider the HTML code in a webpage as a document.That document is actually an object ___',
-        choice1: 'that contains the window object',
-        choice2:'used in word processing applications like Microsoft Word',
-        choice3:'also known as the document object',
-        choice4:'that is not an object at all',
+        choices: ['A: that contains the window object',
+        'B: used in word processing applications like Microsoft Word',
+        'C: also known as the document object',
+        'D: that is not an object at all'],
         answer:3,
     },
     {
         question: 'What does API stand for?',
-        choice1: 'Associated Programs International',
-        choice2:'Application Program Interval',
-        choice3:'Application Programming Interface',
-        choice4:'Apple - Pi Integration',
+        choices:['A: Associated Programs International',
+        'B: Application Program Interval',
+        'C: Application Programming Interface',
+        'D: Apple - Pi Integration'],
         answer:3,
     },
     {
         question: 'The Document Object Model, or DOM is:',
-        choice1: 'A concept that teaches a visual method of pseudocoding',
-        choice2:'The web API that lets you control HTML and CSS',
-        choice3:'Another name for Chrome DevTools',
-        choice4:'The same thing as a window object',
+        choices:['A: A concept that teaches a visual method of pseudocoding',
+        'B: The web API that lets you control HTML and CSS',
+        'C: Another name for Chrome DevTools',
+        'D: The same thing as a window object'],
         answer:2,
     },
     {
         question: 'What does the Storage API do?',
-        choice1:'Loops through items of an array to apply a specific function',
-        choice2:'Declares variables to be used in HTML DOMs',
-        choice3:'Lets you store information in a user\'s browser so it doesn\'t disappear between page loads or visits',
-        choice4:'Checks for available browser cache',
+        choices:['A: Loops through items of an array to apply a specific function',
+        'B: Declares variables to be used in HTML DOMs',
+        'C: Lets you store information in a user\'s browser so it doesn\'t disappear between page loads or visits',
+        'D: Checks for available browser cache'],
         answer:3,
     },
     {
         question: 'In web development, we refer to  user behavior such as a click as an:',
-        choice1: 'event',
-        choice2:'object method',
-        choice3:'event listener',
-        choice4:'event handler',
+        choices:[ 'A: event',
+        'B: object method',
+        'C: event listener',
+        'D: event handler'],
         answer:1,
     }
     ]
@@ -91,13 +93,20 @@ function countdown () {
 // startQuizEl.addEventListener("click", countdown);
 startQuizEl.addEventListener("click",() => {
     countdown();
-    forEach (function(){
+    //Hide the main screen on button-click
+    startScreen.setAttribute("id", "hide");
 
-
-    }
-    )
+    //forEach (function(){}
+    
 })
+//function to print choices to the main screen after showing the question
 
+function printAnswers () {
+    for (let i = 0; i < questions.choices.length; i++){
+        console.log(questions.choices[i])
+    }
+}
+printAnswers()
 
     
     

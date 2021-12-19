@@ -4,7 +4,7 @@
     var startScreen = document.getElementById("start-screen")
     //2. Set attribute
     startScreen.setAttribute("id", "hide");
-    startScreen.removeAttribute("id", "show");
+    startScreen.removeAttribute("id", "hide");
 
 //Local Storage
 localStorage.setItem("key", "value");

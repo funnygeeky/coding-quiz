@@ -13,6 +13,14 @@
 
     <header>
         <!-- Enter high score link and timer here -->
+        <!-- Display High Scores link in upper left corner -->
+        <div id="highscores">
+            <a href="./high_scores.html">High Scores</a>
+        </div>  
+         <!-- The timer starts when the button is clicked -->
+         <div id="timer"></div>
+         <!-- Countdown starts at 75 seconds -->
+        <div id="countdown"></div>
     </header>
     <!-- Created a body div with class center to align content -->
     <div class="center" id="start-screen">
@@ -27,23 +35,12 @@
             <button class="btn">
                 Start Quiz
             </button>
-            <!-- The timer starts when the button is clicked -->
-            <div id="timer"></div>
         </div>
-        <!-- Countdown starts at 75 seconds -->
-        <div id="countdown"></div>
-
     </div>
-    <!-- Display High Scores link in upper left corner -->
-    <div id="highscores">
-        <a href="./high_scores.html">High Scores</a>
-    </div>
-
     <!--Created div for the current question  -->
     <div id="show"> </div>
-</body>
 
-<script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
