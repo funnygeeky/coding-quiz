@@ -58,3 +58,9 @@
 #hide {
     display: none;
 }
+
+.button {
+    width: 150px;
+    height: 150px;
+    color:blue
+}

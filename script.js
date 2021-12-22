@@ -59,7 +59,9 @@ var questions = [
         answer:1,
     }
     ]
-    var choiceBtn = document.createElement("button");
+    
+    
+
     
 
     var timeLeft = 75;
@@ -107,16 +109,18 @@ startQuizEl.addEventListener("click",() => {
 
 function printAnswers () {
     for (let i = 0; i < questions[0].choices.length; i++){
-        console.log(questions[0].choices[i]) &&
-        choiceBtn.textContent &&
-        choiceBtn.setAttribute(".choice-button")
-        choiceBtn.setAttribute("")
-        
-        
-      
+        console.log(questions[0].choices[i])
+    //create a button for each choice
+    var choiceBtn = document.createElement("button");
+    choiceBtn.setAttribute("class",".button");
+    choiceBtn.setAttribute("data-choice", choices[i]);
+    console.log (choiceBtn);
+    var clickedBtn = choiceBtn.addEventListener("click",clickedBtn);
+console.log (clickedBtn);
     }
 }
 printAnswers()
+showQuestion
 
     
     
